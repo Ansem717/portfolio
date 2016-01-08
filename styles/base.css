@@ -1,0 +1,12 @@
+body {
+  
+}
+
+ul {
+  width: 20%;
+  list-style-type: none;
+}
+
+li {
+  border: solid 1px black;
+}
