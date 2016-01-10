@@ -1,10 +1,11 @@
-var projects =  [
+var projectData =  [
   {
     title: 'title',
     category: 'cat',
-    description: 'description',
-    imgSpoiler: 'img link',
-    pubDate: 'mm-dd-yyy',
+    description: 'description. html tags allowed.',
+    imgSpoiler: 'direct img link',
+    pubDate: 'Month Day, Year',
+    project-link: 'direct project link',
     authors:[ //Array of authors, in case project has multiple authors
       {
         name: 'name',
@@ -14,44 +15,9 @@ var projects =  [
         name: 'name2',
         link: 'url2',
       },
-    ],
-  },
-  {
-    title: 'title',
-    category: 'cat',
-    description: 'description',
-    imgSpoiler: 'img link',
-    pubDate: 'mm-dd-yyy',
-    authors:[ //Array of authors, in case project has multiple authors
       {
-        name: 'name',
-        link: 'url',
-      },
-    ],
-  },
-  {
-    title: 'title',
-    category: 'cat',
-    description: 'description',
-    imgSpoiler: 'img link',
-    pubDate: 'mm-dd-yyy',
-    authors:[ //Array of authors, in case project has multiple authors
-      {
-        name: 'name',
-        link: 'url',
-      },
-    ],
-  },
-  {
-    title: 'title',
-    category: 'cat',
-    description: 'description',
-    imgSpoiler: 'img link',
-    pubDate: 'mm-dd-yyy',
-    authors:[ //Array of authors, in case project has multiple authors
-      {
-        name: 'name',
-        link: 'url',
+        name: 'name3',
+        link: 'url3',
       },
     ],
   },
