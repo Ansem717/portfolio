@@ -13,7 +13,7 @@ var projectData =  [
       },
       {
         name: '0-1-name',
-        link: '0-1-url2',
+        link: '0-1-url',
       }
     ],
   },
@@ -44,13 +44,9 @@ var projectData =  [
     projectLink: '2-direct project link',
     authors:[ //Array of authors, in case project has multiple authors
       {
-        name: '2-0-name',
-        link: '2-0-url',
+        name: '2-0-only one author name',
+        link: '2-0-only one author url',
       },
-      {
-        name: '2-1-name',
-        link: '2-1-url',
-      }
     ],
   },
   {
@@ -66,8 +62,12 @@ var projectData =  [
         link: '3-0-url',
       },
       {
-        name: '3-1-name2',
-        link: '3-1-url2',
+        name: '3-1-name',
+        link: '3-1-url',
+      },
+      {
+        name: '3-2-name',
+        link: '3-2-url',
       }
     ],
   },
