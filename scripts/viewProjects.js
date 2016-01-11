@@ -16,7 +16,7 @@ function Project(itm){
   this.imgSpoiler = itm.imgSpoiler;
   this.pubDate = itm.pubDate
   this.projectLink = itm.projectLink;
-  this.authorPlaceholder = itm.authorPlaceholder;
+  this.authorPlaceholder = '';
   this.authors = itm.authors;
 }
 
@@ -44,7 +44,7 @@ Project.prototype.toHtml = function() {
 
 //Sort the project so that newest will be on top
 projectData.sort(function(a,b) {
-  return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+  return (new Date(b.pubDate)) - (new Date(a.pubDate));
 });
 
 projectData.forEach(function(ele) {
