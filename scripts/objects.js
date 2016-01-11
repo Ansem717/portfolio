@@ -1,19 +1,16 @@
 var projectData =  [
   {
-    title: '0-title',
-    category: '0-cat',
-    description: '0-description. html tags allowed.',
+    title: '1984 project',
+    category: 'School Work',
+    description: '',
     imgSpoiler: '0-direct img link',
     pubDate: 'October 20, 2010', //Do not add prefix (1st, 2nd, 3rd) to the numbers.
     projectLink: '0-direct project link',
+    authorPlaceholder: '',
     authors:[ //Array of authors, in case project has multiple authors
       {
-        name: '0-0-name',
-        link: '0-0-url',
-      },
-      {
-        name: '0-1-name',
-        link: '0-1-url',
+        name: 'Andy Malik',
+        link: 'http://www.github.com/Ansem717',
       }
     ],
   },

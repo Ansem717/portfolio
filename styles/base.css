@@ -10,3 +10,7 @@ ul {
 li {
 
 }
+
+address {
+  display: inline-block;
+}
