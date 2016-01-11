@@ -1,9 +1,9 @@
 var projectData =  [
   {
-    title: '1984 project',
+    title: 'A Comparison of Propaganda Techniques between Orwell\'s 1984 and The People\'s Republic of China.',
     category: 'School Work',
-    description: '',
-    imgSpoiler: '0-direct img link',
+    description: '<p>This was the first website I published. I\'ve been messing around with CSS, HTML and Javascript for a good amount of time now, all for fun. This website has many faults cross-browser, as I only used IE and Firefox when making the website. Expect bugs and improper styling, but this project is definitely a milestone in my coding education.</p>',
+    imgSpoiler: 'img/1984_imgSpoil.png',
     pubDate: 'October 20, 2010', //Do not add prefix (1st, 2nd, 3rd) to the numbers.
     projectLink: '0-direct project link',
     authorPlaceholder: '',
