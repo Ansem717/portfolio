@@ -1,3 +1,7 @@
-.about-tab:hover, .project-tab:hover {
+#main-menu h2:hover {
   text-decoration: underline;
+}
+
+#main-menu img:hover {
+  box-shadow: 0px 0px 20px #aaa;
 }
