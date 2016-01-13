@@ -68,7 +68,7 @@ var projectData =  [
     ],
   },
   {
-    title: 'NFL',
+    title: 'Who do you root for?',
     category: 'Entertainment',
     description: '<p>Something very small and simple. I was messing around with multiple choices only being shown based on previous choices, as well as associating a value to show how your choices panned out. Something to throw together for fun on my own time.</p>',
     imgSpoiler: 'img/NFL_imgSpoil.png',

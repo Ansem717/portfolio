@@ -1,6 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="vendor/styles/normalize.css">
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/layout.css">
   <link rel="stylesheet" href="styles/modules.css">
@@ -10,11 +12,12 @@
 </head>
 <body>
 <header id="mainhead">
+  <div id="mobilemenu">MENU</div>
   <h1>Andy Malik's Digital Portfolio</h1>
   <nav id="main-menu">
     <ul>
-      <li id="tab" class="about-tab" data-filter="about"><h2>Who am I?</h2></li>
-      <li id="tab" class="project-tab" data-filter="project"><h2>What have I made?</h2></li>
+      <li id="tab" data-filter="about">Who am I?</li>
+      <li id="tab" data-filter="project">What have I made?</li>
       <li><a href="http://www.facebook.com/andy.s.malik"><img src="img/facebook-button.gif" alt="Facebook" class="facebook-button"></a></li>
       <li><a href="http://www.github.com/Ansem717"><img src="img/github-button.png" alt="GitHub" class="github-button"></a></li>
     </ul>
@@ -51,8 +54,8 @@
     </header>
     <br />
     <a href="{{projectLink}}"><img src="{{imgSpoiler}}" alt="{{title}}" class="project-img"></a>
-    <section class="project-desc">{{{description}}}</section>
-    <a href="{{projectLink}}">View Project</a>
+    <section class="project-desc">{{{description}}}<br />
+    <a href="{{projectLink}}">View Project</a></section>
   </article><br />
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

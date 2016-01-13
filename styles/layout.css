@@ -3,17 +3,53 @@
 }
 
 .project-img {
-  max-width: 25%;
+  max-width: 30%;
+  float: left;
+  padding: 0 2% 1% 0;
 }
 
 .project-desc{
-  width: 90%;
+  /*width: 90%;*/
 }
 
-#mainhead {
+#mainhead h1{
   text-align: center;
 }
 
-hr {
+#main-menu {
+  text-align: center;
+}
+
+#mobilemenu {
+  display: none;
   border: 1px solid black;
+  padding: 4px 1% 2px 1%;
+  font-weight: bold;
+  float: right;
+}
+
+#main-menu ul {
+  width: 100%;
+  list-style-type: none;
+  margin: 5px;
+  padding: 0;
+}
+
+#main-menu li {
+  max-width: 15%;
+  display: inline;
+  margin: 0px 1%;
+  border-bottom: 5px solid #678;
+}
+
+#maincontent {
+  border: 10px solid #bcd;
+  border-radius: 20px;
+  padding: 3%;
+  clear: both;
+}
+
+hr {
+  border-width: 2px;
+  clear: both;
 }
