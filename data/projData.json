@@ -9,9 +9,9 @@
     "authors":[
       {
         "name": "Andy Malik",
-        "link": "http://www.github.com/Ansem717",
+        "link": "http://www.github.com/Ansem717"
       }
-    ],
+    ]
   },
   {
     "title": "Should immigrant children be banned from public schools?",
@@ -23,13 +23,13 @@
     "authors":[
       {
         "name": "Andy Malik",
-        "link": "http://www.github.com/Ansem717",
+        "link": "http://www.github.com/Ansem717"
       },
       {
         "name": "Mahdi Ramadan",
-        "link": "https://www.facebook.com/mahdi.ramadan.9",
+        "link": "https://www.facebook.com/mahdi.ramadan.9"
       }
-    ],
+    ]
   },
   {
     "title": "All about Hermes!",
@@ -41,31 +41,31 @@
     "authors":[
       {
         "name": "Andy Malik",
-        "link": "http://www.github.com/Ansem717",
-      },
-    ],
+        "link": "http://www.github.com/Ansem717"
+      }
+    ]
   },
   {
     "title": "Trapped!",
     "category": "Entertainment",
-    "description": "<p>The biggest project I've ever done, and the first project I've ever made from scratch. This took up the entire summer, and I wasn't disappointed! My dad helped and supported me with the project, and I'm grateful for his help. He was essentially my instructor and code proof-reader. The goal of this project was to create a base world that I would have as a game and build off that, eventually making this game multiplayer, and giving me easy access to adding new quests, levels, monsters, etc. I wanted to create many different objects (as I was learning Object Oriented Programming) so I made completely uncessary arrays of objects. The code is not terribly pleasing to the eye, as my formatting was reliant on IE's inspect tool, and I didn't compare cross-browser. Dozens of variables have arbitrary names like \"n\" or \"nts\" and there is alot of clutter. The game, however, functions as intended. Commands to input in the text based game have shorthands like \"N\" or \"E\" for \"WALK NORTH\" or \"WALK EAST.\" The Up Arrow key performs similar actions as to a command terminal, re-typing the last line that was placed in. Two links, \"Game Log\" and \"Help,\" display pop-up windows of a log of everything that has occurred in game, as well as a help page incase you\’re stuck. I believe that if I was to follow through with another version of the game, it would have a lot less distractions for both the person playing the game, and the person using the code. Also, quick thanks to <a href=\“http://xat.com\”>Xat</a> for a neat chat feature! I hope you enjoy! ",
+    "description": "<p>The biggest project I've ever done, and the first project I've ever made from scratch. This took up the entire summer, and I wasn't disappointed! My dad helped and supported me with the project, and I'm grateful for his help. He was essentially my instructor and code proof-reader. The goal of this project was to create a base world that I would have as a game and build off that, eventually making this game multiplayer, and giving me easy access to adding new quests, levels, monsters, etc. I wanted to create many different objects (as I was learning Object Oriented Programming) so I made completely uncessary arrays of objects. The code is not terribly pleasing to the eye, as my formatting was reliant on IE's inspect tool, and I didn't compare cross-browser. Dozens of variables have arbitrary names like n or nts and there is alot of clutter. The game, however, functions as intended. Commands to input in the text based game have shorthands like N or E for WALK NORTH or WALK EAST. The Up Arrow key performs similar actions as to a command terminal, re-typing the last line that was placed in. Two links, Game Log and Help, display pop-up windows of a log of everything that has occurred in game, as well as a help page incase youe stuck. I believe that if I was to follow through with another version of the game, it would have a lot less distractions for both the person playing the game, and the person using the code. Also, quick thanks to <a href=http://xat.com>Xat</a> for a neat chat feature! I hope you enjoy! ",
     "imgSpoiler": "img/Trapped_imgSpoil.png",
     "pubDate": "August 21, 2010",
     "projectLink": "http://andymalik.com/trapped/1.0/",
     "authors":[
       {
         "name": "Andy Malik",
-        "link": "http://www.github.com/Ansem717",
+        "link": "http://www.github.com/Ansem717"
       },
       {
         "name": "Nick Malik",
-        "link": "https://www.linkedin.com/in/nickmalik",
+        "link": "https://www.linkedin.com/in/nickmalik"
       },
       {
         "name": "Chat by Xat",
-        "link": "http://xat.com",
+        "link": "http://xat.com"
       }
-    ],
+    ]
   },
   {
     "title": "Who do you root for?",
@@ -77,9 +77,9 @@
     "authors":[
       {
         "name": "Andy Malik",
-        "link": "http://www.github.com/Ansem717",
-      },
-    ],
+        "link": "http://www.github.com/Ansem717"
+      }
+    ]
   },
   {
     "title": "Valve Fanbased Website",
@@ -91,8 +91,8 @@
     "authors":[
       {
         "name": "Andy Malik",
-        "link": "http://www.github.com/Ansem717",
-      },
-    ],
-  },
-];
+        "link": "http://www.github.com/Ansem717"
+      }
+    ]
+  }
+]

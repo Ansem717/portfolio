@@ -9,6 +9,12 @@ display.MainNavigation = function() {
   $('#tab').data('filter', 'about').click();
 }
 
-$(document).ready(function() {
+display.initIndexPage = function() {
+  console.log("display.initIndexPage start")
+  Project.all.forEach(function(ele, index, arr){
+    $('#project-placeholder').append(ele.toHtml(ele, index, arr));
+  });
+
   display.MainNavigation();
-})
+  console.log("display.initIndexPage finish; MainNavigation() should be working");
+}
