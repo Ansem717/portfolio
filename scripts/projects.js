@@ -7,7 +7,10 @@
 //Settling down to including the template directly into index.html for now, as to move on with the project.
 //Will revisit later.
 
-var projects = [];
+
+//I'm reading up on the Class-06 Pair Assignment's TODOs to help
+//educate me more on the code I need to write for this Class-06 Portfolio User Stories
+
 
 function Project(itm){
   this.title = itm.title;
@@ -19,6 +22,12 @@ function Project(itm){
   this.authorPlaceholder = '';
   this.authors = itm.authors;
 }
+
+//Instead of a global `projects = []` array, let's track this list directly on the constructor function
+//*******  I'm confused on the reasoning behind this change. *********//
+//var projects = [];
+Project.all = [];
+
 
 Project.prototype.toHtml = function(ele, index, arr) {
   //delcare local variables
