@@ -20,7 +20,7 @@ function Project(itm){
   this.authors = itm.authors;
 }
 
-Project.prototype.toHtml = function(el, inx, arry) {
+Project.prototype.toHtml = function(ele, index, arr) {
   //delcare local variables
   var finAuthors = '';
   var finProj = '';
@@ -30,21 +30,21 @@ Project.prototype.toHtml = function(el, inx, arry) {
   var compAuth = Handlebars.compile(authorTemplate);
   var compProj = Handlebars.compile(projectTemplate);
   //Place the heading before the first item only
-  if(inx==0){
-    finProj = "<h1>Projects I've made</h1><hr />"
+  if(index === 0){
+    finProj = "<h1>Projects I've made</h1>"
   }
   //Compile for each author.
   dataSource.authors.forEach(function(ele, index, arr){
     finAuthors += compAuth(ele);
-    if(index!=arr.length-1){
+    if(index !== arr.length-1){
       finAuthors += " and "; //Place " and " after each author that isn't the last one. We don't need to do anything for the last author.
     };
   });
   this.authorPlaceholder = finAuthors;
-  if(inx!=arry.length-1){
-    finProj += compProj(dataSource)+"<hr/>";//Place horizontal rows after each project except last
+  if(index !== arr.length-1){
+    finProj += compProj(dataSource);//Place horizontal rows after each project except last
   } else {
-    finProj += compProj(dataSource)+"<br/>";//Place line break after last project
+    finProj += compProj(dataSource);//Place line break after last project
   }
   return finProj;
 }
