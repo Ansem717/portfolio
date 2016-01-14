@@ -38,7 +38,6 @@
     </ul>
   </div>
 </section>
-</body>
 <footer>
 </footer>
 <script id="authTemp" type="text/x-handlebars-template"><a href="{{link}}">{{name}}</a></script>
@@ -58,9 +57,12 @@
     <a href="{{projectLink}}">View Project</a></section>
   </article><br />
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
-<script src="scripts/projData.js"></script>
+<script src="vendor/scripts/jquery-2.1.4.js"></script>
+<script src="vendor/scripts/handlebars.js"></script>
 <script src="scripts/projects.js"></script>
 <script src="scripts/display.js"></script>
+<script>
+  Project.fetchAll();
+</script>
+</body>
 </html>
