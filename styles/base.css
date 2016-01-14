@@ -4,26 +4,7 @@ html {
 
 body {
   width: 75%;
-  margin: 2% auto;
-  padding: 0 2%;
-}
-
-#maincontent {
-  border: 3px double black;
-  background-color: #bcd;
-  padding: 0 3%;
-}
-
-ul {
-  width: 100%;
-  list-style-type: none;
-  padding-bottom: 1%;
-}
-
-#main-menu li, #main-menu h2 {
-  max-width: 15%;
-  display: inline;
-  padding: 0 1%;
+  margin: 0 auto;
 }
 
 address {
