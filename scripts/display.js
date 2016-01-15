@@ -3,11 +3,11 @@
   var display={};
 
   display.MainNavigation = function() {
-    $('#main-menu').on('click', '#tab', function() {
+    $('#main-menu').on('click', '.tab', function() {
       $('.placeholder').hide();
       $('#' + $(this).data('filter') + "-placeholder").show();
     });
-    $('#tab').data('filter', 'about').click();
+    $('.tab').data('filter', 'about').click();
   }
 
   display.showSidebar = function() {
