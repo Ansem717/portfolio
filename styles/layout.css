@@ -36,15 +36,16 @@
   padding: 4px 1% 2px 1%;
   font-weight: bold;
   float: right;
+  color: #055;
 }
 
 .mobilemenu, .closemobilemenu {
   width: 100%;
+  color: inherit;
 }
 
 .mobilemenu:hover, .closemobilemenu:hover {
-  border-color: #9ab;
-  color:#567;
+  color: #388;
   cursor: pointer;
 }
 

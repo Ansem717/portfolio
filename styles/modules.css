@@ -1,11 +1,18 @@
 /******************Start Flipper******************************
 | Goal is to horizontally flip the Menu button to an X.      |
 | I was reading an article that walked me through the        |
-| code. I did not write this code on my own, it essentially  |
-| is all pre-written, but I wrote it while following along.  |
+| code. I did not write this code on my own- it essentially  |
+| is all pre-written, but I rewrote it while following along.|
 | I will place comments either explaining new lines of code, |
-| or telling me to learn more about how it works.            |
+| or a personal note to me to learn more about how it works. |
 *************************************************************/
+
+/******************************************************************
+| And I've just tried loading the live-server on my phone.        |
+| Turns out, iPhone 6s doesn't want to run the animations.        |
+| *sigh* I'm gonna ask to see if there is a way to get animations |
+| on my phone, because I'm pretty sure I've seen it done before.  |
+******************************************************************/
 
 #flip-container {
   perspective: 1000; /* Need to learn */
@@ -15,30 +22,30 @@
 	transform: rotateY(180deg); /* Need to learn */
 }
 
-#flip-container, .mobilemenu, .closemobilemenu {
-
-
-}
+/*#flip-container, .mobilemenu, .closemobilemenu {
+  height: 100px;
+  width: 100px;
+}*/
 
 /* Guide says: "flip speed goes here" */
 .flipper {
-  transition: 1s; /* Need to learn */
+  transition: 1s; /* Speed of transformation */
   transform-style: preserve-3d; /* Need to learn */
 
-  position: relative;
+  position: relative; /* declare relative position for children */
 }
 
 /* Guide says: "hide back pane during swap" */
 .mobilemenu {
-  backface-visibility: hidden;
-  position: relative;
+  backface-visibility: hidden; /*If visible, show a transparent backface, revealing the content backwards*/
+  position: relative; /*relative to parent*/
   top: 0;
   left: 0;
 }
 
 .closemobilemenu {
   backface-visibility: hidden;
-  position: absolute;;
+  position: absolute; /* absolutely positioned with parent .flipper */
   top: 0;
   left: 0;
 }
@@ -46,7 +53,7 @@
 /* Guide says: "front pane, placed above back" */
 .mobilemenu {
   z-index: 2;
-  /* for firefox 31 */
+  /* for firefox 31 || Personal Comment: Not sure if the article is outdated; if FF31 is being used*/
   transform: rotateY(0deg);
 }
 
@@ -62,13 +69,13 @@
 ******   so that on resize, it will transform instead of snap    *******/
 
 body, nav {
-  transition: 0.5s; /* Need to learn */
-  transform-style: preserve-3d; /* Need to learn */
+  transition: 0.4s;
+  transform-style: preserve-3d;
 }
 
 h1 {
-  transition: 0.5s; /* Need to learn */
-  transform-style: preserve-3d; /* Need to learn */
+  transition: 0.4s;
+  transform-style: preserve-3d;
 }
 
 
@@ -84,7 +91,7 @@ h1 {
 
 /****Change for smaller screens****/
 
-@media only screen and (max-width: 620px){
+@media only screen and (max-width: 616px){
   h1{
     font-size: 1.4em;
   }
