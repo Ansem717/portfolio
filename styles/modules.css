@@ -1,29 +1,123 @@
-@media only screen and (min-width: 605px) {
-#main-menu li:hover {
-    border-bottom: 5px solid #bcd;
-}
+/******************Start Flipper******************************
+| Goal is to horizontally flip the Menu button to an X.      |
+| I was reading an article that walked me through the        |
+| code. I did not write this code on my own, it essentially  |
+| is all pre-written, but I wrote it while following along.  |
+| I will place comments either explaining new lines of code, |
+| or telling me to learn more about how it works.            |
+*************************************************************/
+
+#flip-container {
+  perspective: 1000; /* Need to learn */
 }
 
-/***Change for smaller screens***/
+#flip-container.flip .flipper {
+	transform: rotateY(180deg); /* Need to learn */
+}
+
+#flip-container, .mobilemenu, .closemobilemenu {
+
+
+}
+
+/* Guide says: "flip speed goes here" */
+.flipper {
+  transition: 1s; /* Need to learn */
+  transform-style: preserve-3d; /* Need to learn */
+
+  position: relative;
+}
+
+/* Guide says: "hide back pane during swap" */
+.mobilemenu {
+  backface-visibility: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.closemobilemenu {
+  backface-visibility: hidden;
+  position: absolute;;
+  top: 0;
+  left: 0;
+}
+
+/* Guide says: "front pane, placed above back" */
+.mobilemenu {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+.closemobilemenu {
+  transform: rotateY(180deg);
+}
+
+/******End Flipper******/
+
+
+
+/*****   I'm going to try and add the transform effect to all properties
+******   so that on resize, it will transform instead of snap    *******/
+
+body, nav {
+  transition: 0.5s; /* Need to learn */
+  transform-style: preserve-3d; /* Need to learn */
+}
+
+h1 {
+  transition: 0.5s; /* Need to learn */
+  transform-style: preserve-3d; /* Need to learn */
+}
+
+
+
+/*****Below is for desktop screens*****/
+
+@media only screen and (min-width: 605px) {
+  #main-menu li:hover {
+      border-bottom: 5px solid #bcd;
+      cursor: pointer;
+  }
+}
+
+/****Change for smaller screens****/
+
+@media only screen and (max-width: 620px){
+  h1{
+    font-size: 1.4em;
+  }
+}
+
 @media only screen and (max-width: 605px) {
-  #main-menu{
-    display:none;
+  body {
+    width: 90%;
   }
 
-  #mobilemenu{
+  h1{
+    font-size: 1.4em;
+    /*transition: 0.5s; /* Need to learn */
+    /*transform-style: preserve-3d; /* Need to learn */
+  }
+
+  #main-menu{
+    display: none;
+    position: relative;
+  }
+
+  #flip-container{
     display:inline-block;
   }
 
-  #mainhead:hover #main-menu{
+  /*#mainhead:hover #main-menu{
     display: block;
-  }
+  }*/
 
   #main-menu ul{
     margin: 0;
-    position: absolute;
-    left: 57.4%;
     width: 250%;
-    font-size: 1em;
+    height: 100%;
   }
 
   #main-menu li{
@@ -33,21 +127,18 @@
     font-weight: bold;
     color: #00f;
     background-color: #9ab;
-    /*border-top-left-radius: 10% 10%;*/
-    border-bottom-left-radius: 15% 100%;
+    /*border-top-left-radius: 10% 50%;
+    border-bottom-left-radius: 10% 50%;*/
     padding-left: 1%;
   }
 
   #main-menu li:hover {
       background-color: #bcd;
+      cursor: pointer;
   }
 
   .facebook-button, .github-button {
-    max-width: 75%;
-  }
-
-  h1{
-    font-size: 1.4em;
+    /*max-width: 100px;*/
   }
 
   .project-desc {
@@ -62,22 +153,23 @@
   }
 }
 
-@media only screen and (max-width: 510px) {
-  h1 {
-    font-size: 1.1em;
-  }
-}
-
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 430px) {
   body:not(h1) {
     font-size: 0.8em;
+    width: 100%;
   }
 
-  #mobilemenu {
+  #mainhead h1 {
+    /*display: none;*/
+  }
+
+  #flip-container {
     padding: 1.5px 1%;
+    margin: 0 2%;
+    /*margin: 5% 5% 0 0;*/
   }
 
-  h1 {
-    font-size: 1em;
+  #maincontent {
+    /*clear: none;*/
   }
 }
