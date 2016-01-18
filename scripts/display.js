@@ -2,13 +2,15 @@
 (function(module) {
   var display={};
 
-  display.MainNavigation = function() {
-    $('#main-menu').on('click', '.tab', function() {
-      $('.placeholder').hide();
-      $('#' + $(this).data('filter') + "-placeholder").show();
-    });
-    $('.tab').data('filter', 'about').click();
-  }
+  // display.MainNavigation = function() {
+  //   console.log("Howdy!")
+  //   $('#main-menu').on('click', '.tab', function() {
+  //     console.log($(this));
+  //     $('.placeholder').hide();
+  //     $('#' + $(this).data('filter') + '-placeholder').show();
+  //   });
+  //   $('.tab').data('filter', 'about').click();
+  // }
 
   display.showSidebar = function() {
     $('#flip-container').on('click', function() {
@@ -28,7 +30,7 @@
       $('#project-placeholder').append(ele.toHtml(ele, index, arr));
     });
 
-    display.MainNavigation();
+    // display.MainNavigation();
     display.showSidebar();
   }
 

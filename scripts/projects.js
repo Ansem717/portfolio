@@ -1,14 +1,3 @@
-/**********************************************************************************\
-|  This is going to read project-template-outline.html and author-template.html    |
-|  translate it for template use and plug in projData.js's variables accordingly.  |
-|  Then it will perform any necessary actions before displaying the articles,      |
-|  like sorting them.                                                              |
-|                                                                                  |
-|  After some trial and error, I couldn't figure out how to load the external html |
-|  and run it through handlebars. Settling down to including the template directly |
-|  into index.html for now, as to move on with the project. Will revisit later.    |
-\**********************************************************************************/
-
 (function(module) {
   function Project(itm){
     this.title = itm.title;
@@ -20,12 +9,8 @@
     this.authorPlaceholder = '';
     this.authors = itm.authors;
   }
-
-  //Instead of a global `projects = []` array, let's track this list directly on the constructor function
-  //*******  I'm confused on the reasoning behind this change. *********//
-  //var projects = [];
+ 
   Project.all = [];
-
 
   Project.prototype.toHtml = function(ele, index, arr) {
     var finAuthors = '';   //delcare local variables

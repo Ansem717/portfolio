@@ -18,11 +18,16 @@
   perspective: 1000; /* Need to learn */
 }
 
+
+/* For every element with an id of flip-container and a class of flip,
+find the element with a class of flipper and transform it by rotating it 180 degrees.
+This allows us to trigger the effect by just simply adding the class. */
 #flip-container.flip .flipper {
-	transform: rotateY(180deg); /* Need to learn */
+	transform: rotateY(180deg);
 }
 
-/*#flip-container, .mobilemenu, .closemobilemenu {
+/* Just sets a size so that everything is equal. Works better for me if I don't specify.
+#flip-container, .mobilemenu, .closemobilemenu {
   height: 100px;
   width: 100px;
 }*/
@@ -52,7 +57,7 @@
 
 /* Guide says: "front pane, placed above back" */
 .mobilemenu {
-  z-index: 2;
+  z-index: 5;
   /* for firefox 31 || Personal Comment: Not sure if the article is outdated; if FF31 is being used*/
   transform: rotateY(0deg);
 }
@@ -94,6 +99,7 @@ h1 {
 @media only screen and (max-width: 616px){
   h1{
     font-size: 1.4em;
+    width: 88%;
   }
 }
 

@@ -22,8 +22,8 @@
   <h1>Andy Malik's Digital Portfolio</h1>
   <nav id="main-menu">
     <ul>
-      <li class="tab" data-filter="about">about</li>
-      <li class="tab" data-filter="project">projects</li>
+      <li class="tab" data-filter="about"><a href="/">about</a></li>
+      <li class="tab" data-filter="project"><a href="/projects">projects</a></li>
       <li><a href="http://www.facebook.com/andy.s.malik"><img src="img/facebook-button.gif" alt="Facebook" class="facebook-button"></a></li>
       <li><a href="http://www.github.com/Ansem717"><img src="img/github-button.png" alt="GitHub" class="github-button"></a></li>
     </ul>
@@ -66,9 +66,13 @@
 </script>
 <script src="https://code.jquery.com/jquery-2.0.2.js"></script>
 <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="vendor/scripts/html5sql.js"></script>
+<script src="vendor/scripts/page.js"></script>
 <script src="vendor/scripts/handlebars.js"></script>
 <script src="scripts/projects.js"></script>
 <script src="scripts/display.js"></script>
+<script src="scripts/controllers.js"></script>
+<script src="scripts/router.js"></script>
 <script>
   Project.fetchAll();
 </script>
