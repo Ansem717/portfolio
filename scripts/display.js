@@ -14,9 +14,11 @@
 
   display.showSidebar = function() {
     $('#flip-container').on('click', function() {
-      document.querySelector('#flip-container').classList.toggle("flip");
+      document.querySelector('#flip-container').classList.toggle('flip');
+      document.querySelector('#all').classList.toggle('move');
+      document.querySelector('#mini-menu').classList.toggle('move');
       /*
-      $('#main-menu').toggle('slide', { direction: 'right' }, 1000);
+      $('#mini-menu').toggle('slide', { direction: 'right' }, 1000);
       $('#MoveMe').toggle('slide', { direction: 'left' }, 1000);
       $('.mobilemenu').animate({opacity: "toggle"}, 1000);
       $('.closemobilemenu').animate({opacity: "toggle"}, 1000);

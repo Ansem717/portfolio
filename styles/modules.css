@@ -68,18 +68,16 @@ This allows us to trigger the effect by just simply adding the class. */
 
 /******End Flipper******/
 
-
-
 /*****   I'm going to try and add the transform effect to all properties
 ******   so that on resize, it will transform instead of snap    *******/
 
 body, nav {
-  transition: 0.4s;
+  transition: 0.5s;
   transform-style: preserve-3d;
 }
 
 h1 {
-  transition: 0.4s;
+  transition: 0.5s;
   transform-style: preserve-3d;
 }
 
@@ -108,15 +106,32 @@ h1 {
     width: 90%;
   }
 
+/****************Start SIDEBAR Animations**********************
+| These are for when the screen is smaller, the sidebar will  |
+| essentially push the document from the right. This will be  |
+| achieved by toggling classes.                               |
+**************************************************************/
+
+  #all.move {
+    transform: translateX(-85%);
+  }
+
+  #mini-menu.move {
+    transform: translateX(-110%);
+  }
+
+  #mini-menu {
+    display: block;
+  }
+
   h1{
     font-size: 1.4em;
     /*transition: 0.5s; /* Need to learn */
     /*transform-style: preserve-3d; /* Need to learn */
   }
 
-  #main-menu{
+  #main-menu {
     display: none;
-    position: relative;
   }
 
   #flip-container{
@@ -127,14 +142,14 @@ h1 {
     display: block;
   }*/
 
-  #main-menu ul{
+  #mini-menu ul {
     margin: 0;
     width: 250%;
     height: 100%;
   }
 
-  #main-menu li{
-    display: block;
+  #mini-menu li {
+    /*display: block;*/
     padding: 10px 0;
     border: none;
     font-weight: bold;
@@ -145,7 +160,7 @@ h1 {
     padding-left: 1%;
   }
 
-  #main-menu li:hover {
+  #mini-menu li:hover {
       background-color: #bcd;
       cursor: pointer;
   }

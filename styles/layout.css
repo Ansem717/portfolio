@@ -14,9 +14,10 @@
   /*width: 90%;*/
 }
 
-#MoveMe {
-  position: relative;
-  z-index: -1;
+#all {
+  /*float: left;*/
+  /*position: relative;*/
+  transition: 0.8s;
 }
 
 #mainhead h1{
@@ -29,6 +30,18 @@
   z-index: 0;
 }
 
+#mini-menu {
+  /*clear: both;*/
+  position: fixed;
+  left: 120%;
+  top: 0;
+  width: 100%;
+  transition: 0.8s;
+  display: none;
+  z-index: 1;
+  /*outline: 1px solid black;*/
+}
+
 #flip-container {
   text-align: center;
   display: none;
@@ -37,6 +50,7 @@
   font-weight: bold;
   float: right;
   color: #055;
+  /*margin-top: 2%;*/
 }
 
 .mobilemenu, .closemobilemenu {
@@ -49,7 +63,7 @@
   cursor: pointer;
 }
 
-#main-menu ul {
+#main-menu ul, #mini-menu ul {
   width: 100%;
   list-style-type: none;
   margin: 5px;
@@ -59,6 +73,14 @@
 #main-menu li {
   max-width: 15%;
   display: inline;
+  font-weight: bold;
+  color: #056;
+  margin: 0px 3%;
+  border-bottom: 5px solid #678;
+}
+
+#mini-menu li {
+  max-width: 15%;
   font-weight: bold;
   color: #056;
   margin: 0px 3%;

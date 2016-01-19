@@ -7,11 +7,9 @@ page('/projects', projects)
 page();
 
 function about() {
-  console.log('/, about');
   aboutController.init();
 }
 
 function projects() {
-  console.log('/projects, projects');
   projController.init();
 }
