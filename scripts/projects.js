@@ -9,7 +9,7 @@
     this.authorPlaceholder = '';
     this.authors = itm.authors;
   }
- 
+
   Project.all = [];
 
   Project.prototype.toHtml = function(ele, index, arr) {
@@ -29,12 +29,8 @@
         finAuthors += " and "; //Place " and " after each author that isn't the last one. We don't need to do anything for the last author.
       };
     });
-    this.authorPlaceholder = finAuthors;
-    if(index !== arr.length-1){
-      finProj += compProj(dataSource);
-    } else {
-      finProj += compProj(dataSource);
-    }
+this.authorPlaceholder = finAuthors;
+    finProj += compProj(dataSource);
     return finProj;
   }
 

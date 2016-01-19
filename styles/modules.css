@@ -113,11 +113,11 @@ h1 {
 **************************************************************/
 
   #all.move {
-    transform: translateX(-85%);
+    transform: translateX(-75%);
   }
 
   #mini-menu.move {
-    transform: translateX(-110%);
+    transform: translateX(-75%);
   }
 
   #mini-menu {

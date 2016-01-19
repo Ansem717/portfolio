@@ -25,6 +25,16 @@
       */
       // $('mobilemenu').toggle('slide', { direction: 'left' }, 1000);
     });
+    //fixes the sidebar
+    $(window).on('scroll', function(){
+      var sclTop = $(window).scrollTop();
+      var $mm = $('#mini-menu');
+      if ( $('#flip-container').attr('class') === 'flip') {
+        if ( parseInt($mm.css('height')) <= sclTop){
+          $('#flip-container').click();
+        }
+      }
+    });
   }
 
   display.initIndexPage = function() {
