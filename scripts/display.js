@@ -30,7 +30,10 @@
       var sclTop = $(window).scrollTop();
       var $mm = $('#mini-menu');
       if ( $('#flip-container').attr('class') === 'flip') {
-        if ( parseInt($mm.css('height')) <= sclTop){
+        if ( $mm.height() <= sclTop ){
+          $('#flip-container').click();
+        }
+        if ( window.width >= 605){
           $('#flip-container').click();
         }
       }

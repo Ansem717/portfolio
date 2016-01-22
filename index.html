@@ -11,7 +11,7 @@
   </title>
 </head>
 <body>
-<div id="all">
+<div id="all" style="transition: 0.8s"> <!-- Styles in HTML to prevent CSS inheritance -->
   <div id="flip-container">
     <div class="flipper">
       <div class="mobilemenu">MENU</div>
@@ -67,9 +67,12 @@
       </div>
     </header>
     <br />
-    <a href="{{projectLink}}"><img src="{{imgSpoiler}}" alt="{{title}}" class="project-img"></a>
-    <section class="project-desc">{{{description}}}<br />
-    <a href="{{projectLink}}">View Project</a></section>
+    <a href="{{projectLink}}"> <img src="{{imgSpoiler}}" alt="{{title}}" class="project-img"> </a>
+    <section class="project-desc">
+      {{{description}}}
+      <br />
+      <a href="{{projectLink}}">View '{{title}}'</a>
+    </section>
   </article><br />
 </script>
 <script src="https://code.jquery.com/jquery-2.0.2.js"></script>

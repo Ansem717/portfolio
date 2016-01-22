@@ -70,7 +70,7 @@ This allows us to trigger the effect by just simply adding the class. */
 
 /*****   I'm going to try and add the transform effect to all properties
 ******   so that on resize, it will transform instead of snap    *******/
-
+/*
 body, nav {
   transition: 0.5s;
   transform-style: preserve-3d;
@@ -79,7 +79,7 @@ body, nav {
 h1 {
   transition: 0.5s;
   transform-style: preserve-3d;
-}
+}*/
 
 
 
@@ -94,12 +94,12 @@ h1 {
 
 /****Change for smaller screens****/
 
-@media only screen and (max-width: 616px){
+/*@media only screen and (max-width: 616px){
   h1{
     font-size: 1.4em;
     width: 88%;
   }
-}
+}*/
 
 @media only screen and (max-width: 605px) {
   body {

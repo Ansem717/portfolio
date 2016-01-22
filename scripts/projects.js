@@ -29,7 +29,7 @@
         finAuthors += " and "; //Place " and " after each author that isn't the last one. We don't need to do anything for the last author.
       };
     });
-this.authorPlaceholder = finAuthors;
+    this.authorPlaceholder = finAuthors;
     finProj += compProj(dataSource);
     return finProj;
   }
@@ -66,5 +66,6 @@ this.authorPlaceholder = finAuthors;
       }
     });
   }
+
   module.Project = Project;
 })(window);
