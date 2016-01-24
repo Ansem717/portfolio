@@ -3,9 +3,9 @@
 
  // Create empty object to store functions
 (function(module) {
-  var display = {};
+  var displayProj = {};
 
-  display.showSidebar = function() {
+  displayProj.showSidebar = function() {
     $('#flip-container').on('click', function() {
       document.querySelector('#flip-container').classList.toggle('flip');
       document.querySelector('#all').classList.toggle('move');
@@ -29,12 +29,12 @@
     });
   };
 
-  display.initIndexPage = function() {
+  displayProj.initIndexPage = function() {
     Project.all.map(function(ele, index, arr) {
       $('#project-placeholder').append(ele.toHtml(ele, index, arr));
     });
-    display.showSidebar();
+    displayProj.showSidebar();
   };
 
-  module.display = display;
+  module.displayProj = displayProj;
 })(window);

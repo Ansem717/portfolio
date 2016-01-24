@@ -1,6 +1,6 @@
 
 /******************Start Flipper******************************
-| Goal is to horizontally flip the Menu button to an X.      | 
+| Goal is to horizontally flip the Menu button to an X.      |
 *************************************************************/
 
 #flip-container {
@@ -45,6 +45,17 @@
 
 /*****For desktop screens*****/
 
+@media only screen and (min-width: 1020px) {
+  #name {
+    float: left;
+    margin-left: 100px;
+  }
+
+  #main-menu {
+    padding-top: 10px;
+  }
+}
+
 @media only screen and (min-width: 605px) {
   #main-menu li:hover {
       border-bottom: 5px solid #bcd;
@@ -66,21 +77,22 @@
 **************************************************************/
 
   #all.move {
-    transform: translateX(-75%);
+    transform: translateX(-44%);
   }
 
   #mini-menu.move {
-    transform: translateX(-75%);
+    transform: translateX(-44%);
   }
 
 /****** END Sidebar Class Animations ******/
 
-  #mini-menu {
-    display: block;
+  .code {
+    padding: 0 0 0 0.25em;
+    line-height: 1.1em;
   }
 
-  h1{
-    font-size: 1.4em;
+  #mini-menu {
+    display: block;
   }
 
   #main-menu {
@@ -102,13 +114,17 @@
     border: none;
     font-weight: bold;
     color: #00f;
-    background-color: #9ab;
+    background-color: #9ac;
     padding-left: 1%;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    margin-top: 10px;
   }
 
   #mini-menu li:hover {
       background-color: #bcd;
       cursor: pointer;
+      transform: translateX(-7%);
   }
 
   .project-desc {

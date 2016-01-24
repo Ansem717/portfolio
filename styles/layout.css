@@ -10,6 +10,14 @@
   padding: 0 2% 1% 0;
 }
 
+.code {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #bce;
+  line-height: 1.3em;
+  padding: 0.2em 0.2em 0.2em 0.6em;
+  border-radius: 10px;
+}
+
 #mainhead h1{
   text-align: center;
 }
