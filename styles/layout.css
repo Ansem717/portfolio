@@ -10,16 +10,6 @@
   padding: 0 2% 1% 0;
 }
 
-.project-desc{
-  /*width: 90%;*/
-}
-
-#all {
-  /*float: left;*/
-  /*position: relative;*/
-  /*transition: 0.8s;*/
-}
-
 #mainhead h1{
   text-align: center;
 }
@@ -31,15 +21,12 @@
 }
 
 #mini-menu {
-  /*clear: both;*/
   position: absolute;
   left: 100%;
   top: 0;
   width: 100%;
   transition: 0.8s;
   display: none;
-  /*z-index: 1;*/
-  /*outline: 1px solid black;*/
 }
 
 #flip-container {
@@ -50,7 +37,6 @@
   font-weight: bold;
   float: right;
   color: #055;
-  /*margin-top: 2%;*/
 }
 
 .mobilemenu, .closemobilemenu {

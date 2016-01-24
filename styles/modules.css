@@ -1,46 +1,23 @@
+
 /******************Start Flipper******************************
-| Goal is to horizontally flip the Menu button to an X.      |
-| I was reading an article that walked me through the        |
-| code. I did not write this code on my own- it essentially  |
-| is all pre-written, but I rewrote it while following along.|
-| I will place comments either explaining new lines of code, |
-| or a personal note to me to learn more about how it works. |
+| Goal is to horizontally flip the Menu button to an X.      | 
 *************************************************************/
 
-/******************************************************************
-| And I've just tried loading the live-server on my phone.        |
-| Turns out, iPhone 6s doesn't want to run the animations.        |
-| *sigh* I'm gonna ask to see if there is a way to get animations |
-| on my phone, because I'm pretty sure I've seen it done before.  |
-******************************************************************/
-
 #flip-container {
-  perspective: 1000; /* Need to learn */
+  perspective: 1000;
 }
 
-
-/* For every element with an id of flip-container and a class of flip,
-find the element with a class of flipper and transform it by rotating it 180 degrees.
-This allows us to trigger the effect by just simply adding the class. */
 #flip-container.flip .flipper {
 	transform: rotateY(180deg);
 }
 
-/* Just sets a size so that everything is equal. Works better for me if I don't specify.
-#flip-container, .mobilemenu, .closemobilemenu {
-  height: 100px;
-  width: 100px;
-}*/
-
-/* Guide says: "flip speed goes here" */
 .flipper {
   transition: 1s; /* Speed of transformation */
-  transform-style: preserve-3d; /* Need to learn */
+  transform-style: preserve-3d;
 
   position: relative; /* declare relative position for children */
 }
 
-/* Guide says: "hide back pane during swap" */
 .mobilemenu {
   backface-visibility: hidden; /*If visible, show a transparent backface, revealing the content backwards*/
   position: relative; /*relative to parent*/
@@ -55,11 +32,9 @@ This allows us to trigger the effect by just simply adding the class. */
   left: 0;
 }
 
-/* Guide says: "front pane, placed above back" */
 .mobilemenu {
   z-index: 5;
-  /* for firefox 31 || Personal Comment: Not sure if the article is outdated; if FF31 is being used*/
-  transform: rotateY(0deg);
+  transform: rotateY(0deg); /*This is for cross-browser capabilities*/
 }
 
 .closemobilemenu {
@@ -68,22 +43,7 @@ This allows us to trigger the effect by just simply adding the class. */
 
 /******End Flipper******/
 
-/*****   I'm going to try and add the transform effect to all properties
-******   so that on resize, it will transform instead of snap    *******/
-/*
-body, nav {
-  transition: 0.5s;
-  transform-style: preserve-3d;
-}
-
-h1 {
-  transition: 0.5s;
-  transform-style: preserve-3d;
-}*/
-
-
-
-/*****Below is for desktop screens*****/
+/*****For desktop screens*****/
 
 @media only screen and (min-width: 605px) {
   #main-menu li:hover {
@@ -94,19 +54,12 @@ h1 {
 
 /****Change for smaller screens****/
 
-/*@media only screen and (max-width: 616px){
-  h1{
-    font-size: 1.4em;
-    width: 88%;
-  }
-}*/
-
 @media only screen and (max-width: 605px) {
   body {
     width: 90%;
   }
 
-/****************Start SIDEBAR Animations**********************
+/*************** Start SIDEBAR Animations *********************
 | These are for when the screen is smaller, the sidebar will  |
 | essentially push the document from the right. This will be  |
 | achieved by toggling classes.                               |
@@ -120,14 +73,14 @@ h1 {
     transform: translateX(-75%);
   }
 
+/****** END Sidebar Class Animations ******/
+
   #mini-menu {
     display: block;
   }
 
   h1{
     font-size: 1.4em;
-    /*transition: 0.5s; /* Need to learn */
-    /*transform-style: preserve-3d; /* Need to learn */
   }
 
   #main-menu {
@@ -138,10 +91,6 @@ h1 {
     display:inline-block;
   }
 
-  /*#mainhead:hover #main-menu{
-    display: block;
-  }*/
-
   #mini-menu ul {
     margin: 0;
     width: 250%;
@@ -149,24 +98,17 @@ h1 {
   }
 
   #mini-menu li {
-    /*display: block;*/
     padding: 10px 0;
     border: none;
     font-weight: bold;
     color: #00f;
     background-color: #9ab;
-    /*border-top-left-radius: 10% 50%;
-    border-bottom-left-radius: 10% 50%;*/
     padding-left: 1%;
   }
 
   #mini-menu li:hover {
       background-color: #bcd;
       cursor: pointer;
-  }
-
-  .facebook-button, .github-button {
-    /*max-width: 100px;*/
   }
 
   .project-desc {
@@ -187,17 +129,8 @@ h1 {
     width: 100%;
   }
 
-  #mainhead h1 {
-    /*display: none;*/
-  }
-
   #flip-container {
     padding: 1.5px 1%;
     margin: 0 2%;
-    /*margin: 5% 5% 0 0;*/
-  }
-
-  #maincontent {
-    /*clear: none;*/
   }
 }
