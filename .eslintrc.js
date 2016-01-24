@@ -1,3 +1,4 @@
 module.exports = {
-    "extends": "google"
+  'extends': 'google',
+  'no-inline-comments': 0
 };

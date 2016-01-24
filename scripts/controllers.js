@@ -1,12 +1,20 @@
-var aboutController = {};
-var projController = {};
+/* global $:true*/
+/* the above is to tell the linter that these global vars do exist */
 
-aboutController.init = function(){
+/* **** About Controller *****/
+
+var aboutController = {};
+
+aboutController.init = function() {
   $('.placeholder').hide();
   $('#about-placeholder').show();
-}
+};
 
-projController.init = function(){
+/* *** Project Controller ****/
+
+var projController = {};
+
+projController.init = function() {
   $('.placeholder').hide();
   $('#project-placeholder').show();
-}
+};
