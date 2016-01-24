@@ -1,4 +1,4 @@
-/* global $ Handlebars localStorage display alert window:true*/
+/* global $ Handlebars localStorage displayProj alert window:true*/
 /* eslint no-alert: 0, require-jsdoc: 0, no-inline-comments: 0*/
 /* the above is instructions to the linter */
 
@@ -54,13 +54,13 @@
       success: function(data, status, xhr) {
         if (localStorage.etag === xhr.getResponseHeader('ETag')) {
           Project.loadAll(JSON.parse(localStorage.projData));
-          display.initIndexPage();
+          displayProj.initIndexPage();
         } else {
           localStorage.etag = xhr.getResponseHeader('ETag');
           $.getJSON('/data/projData.JSON', function(projData) {
             Project.loadAll(projData);
             localStorage.projData = JSON.stringify(projData);
-            display.initIndexPage();
+            displayProj.initIndexPage();
           });
         }
       },

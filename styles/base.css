@@ -1,6 +1,12 @@
 html {
   background-color: #def;
   overflow-x: hidden;
+  font-family: Georgia, Serif;
+}
+
+a {
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 1.02em;
 }
 
 body {
