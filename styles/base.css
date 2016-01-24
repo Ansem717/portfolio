@@ -1,5 +1,6 @@
 html {
   background-color: #def;
+  overflow-x: hidden;
 }
 
 body {
@@ -9,4 +10,13 @@ body {
 
 address {
   display: inline-block;
+}
+
+footer {
+  clear:both;
+}
+
+ul a {
+  text-decoration: none;
+  color: #056;
 }

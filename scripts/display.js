@@ -1,36 +1,40 @@
-//Create empty object to store functions
-(function(module) {
-  var display={};
+/* global $ document Project window:true*/
+/* the above is instructions to the linter */
 
-  display.MainNavigation = function() {
-    $('#main-menu').on('click', '.tab', function() {
-      $('.placeholder').hide();
-      $('#' + $(this).data('filter') + "-placeholder").show();
-    });
-    $('.tab').data('filter', 'about').click();
-  }
+ // Create empty object to store functions
+(function(module) {
+  var display = {};
 
   display.showSidebar = function() {
     $('#flip-container').on('click', function() {
-      document.querySelector('#flip-container').classList.toggle("flip");
-      /*
-      $('#main-menu').toggle('slide', { direction: 'right' }, 1000);
-      $('#MoveMe').toggle('slide', { direction: 'left' }, 1000);
-      $('.mobilemenu').animate({opacity: "toggle"}, 1000);
-      $('.closemobilemenu').animate({opacity: "toggle"}, 1000);
-      */
-      // $('mobilemenu').toggle('slide', { direction: 'left' }, 1000);
+      document.querySelector('#flip-container').classList.toggle('flip');
+      document.querySelector('#all').classList.toggle('move');
+      document.querySelector('#mini-menu').classList.toggle('move');
     });
-  }
+
+    // close the SIDEBAR on certain conditions
+    $(window).on('scroll', function() {
+      if ($('#flip-container').attr('class') === 'flip') {
+        if ($('#mini-menu').height() <= $(window).scrollTop()) {
+          $('#flip-container').click();
+        }
+      }
+    });
+    $(window).on('resize', function() {
+      if ($('#flip-container').attr('class') === 'flip') {
+        if (window.innerWidth >= 604) {
+          $('#flip-container').click();
+        }
+      }
+    });
+  };
 
   display.initIndexPage = function() {
-    Project.all.map(function(ele, index, arr){
+    Project.all.map(function(ele, index, arr) {
       $('#project-placeholder').append(ele.toHtml(ele, index, arr));
     });
-
-    display.MainNavigation();
     display.showSidebar();
-  }
+  };
 
   module.display = display;
 })(window);

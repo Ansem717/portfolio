@@ -1,53 +1,40 @@
+
 /******************Start Flipper******************************
-| Goal is to horizontally flip the Menu button to an X.      |
-| I was reading an article that walked me through the        |
-| code. I did not write this code on my own, it essentially  |
-| is all pre-written, but I wrote it while following along.  |
-| I will place comments either explaining new lines of code, |
-| or telling me to learn more about how it works.            |
+| Goal is to horizontally flip the Menu button to an X.      | 
 *************************************************************/
 
 #flip-container {
-  perspective: 1000; /* Need to learn */
+  perspective: 1000;
 }
 
 #flip-container.flip .flipper {
-	transform: rotateY(180deg); /* Need to learn */
+	transform: rotateY(180deg);
 }
 
-#flip-container, .mobilemenu, .closemobilemenu {
-
-
-}
-
-/* Guide says: "flip speed goes here" */
 .flipper {
-  transition: 1s; /* Need to learn */
-  transform-style: preserve-3d; /* Need to learn */
+  transition: 1s; /* Speed of transformation */
+  transform-style: preserve-3d;
 
-  position: relative;
+  position: relative; /* declare relative position for children */
 }
 
-/* Guide says: "hide back pane during swap" */
 .mobilemenu {
-  backface-visibility: hidden;
-  position: relative;
+  backface-visibility: hidden; /*If visible, show a transparent backface, revealing the content backwards*/
+  position: relative; /*relative to parent*/
   top: 0;
   left: 0;
 }
 
 .closemobilemenu {
   backface-visibility: hidden;
-  position: absolute;;
+  position: absolute; /* absolutely positioned with parent .flipper */
   top: 0;
   left: 0;
 }
 
-/* Guide says: "front pane, placed above back" */
 .mobilemenu {
-  z-index: 2;
-  /* for firefox 31 */
-  transform: rotateY(0deg);
+  z-index: 5;
+  transform: rotateY(0deg); /*This is for cross-browser capabilities*/
 }
 
 .closemobilemenu {
@@ -56,24 +43,7 @@
 
 /******End Flipper******/
 
-
-
-/*****   I'm going to try and add the transform effect to all properties
-******   so that on resize, it will transform instead of snap    *******/
-
-body, nav {
-  transition: 0.5s; /* Need to learn */
-  transform-style: preserve-3d; /* Need to learn */
-}
-
-h1 {
-  transition: 0.5s; /* Need to learn */
-  transform-style: preserve-3d; /* Need to learn */
-}
-
-
-
-/*****Below is for desktop screens*****/
+/*****For desktop screens*****/
 
 @media only screen and (min-width: 605px) {
   #main-menu li:hover {
@@ -84,61 +54,61 @@ h1 {
 
 /****Change for smaller screens****/
 
-@media only screen and (max-width: 620px){
-  h1{
-    font-size: 1.4em;
-  }
-}
-
 @media only screen and (max-width: 605px) {
   body {
     width: 90%;
   }
 
-  h1{
-    font-size: 1.4em;
-    /*transition: 0.5s; /* Need to learn */
-    /*transform-style: preserve-3d; /* Need to learn */
+/*************** Start SIDEBAR Animations *********************
+| These are for when the screen is smaller, the sidebar will  |
+| essentially push the document from the right. This will be  |
+| achieved by toggling classes.                               |
+**************************************************************/
+
+  #all.move {
+    transform: translateX(-75%);
   }
 
-  #main-menu{
+  #mini-menu.move {
+    transform: translateX(-75%);
+  }
+
+/****** END Sidebar Class Animations ******/
+
+  #mini-menu {
+    display: block;
+  }
+
+  h1{
+    font-size: 1.4em;
+  }
+
+  #main-menu {
     display: none;
-    position: relative;
   }
 
   #flip-container{
     display:inline-block;
   }
 
-  /*#mainhead:hover #main-menu{
-    display: block;
-  }*/
-
-  #main-menu ul{
+  #mini-menu ul {
     margin: 0;
     width: 250%;
     height: 100%;
   }
 
-  #main-menu li{
-    display: block;
+  #mini-menu li {
     padding: 10px 0;
     border: none;
     font-weight: bold;
     color: #00f;
     background-color: #9ab;
-    /*border-top-left-radius: 10% 50%;
-    border-bottom-left-radius: 10% 50%;*/
     padding-left: 1%;
   }
 
-  #main-menu li:hover {
+  #mini-menu li:hover {
       background-color: #bcd;
       cursor: pointer;
-  }
-
-  .facebook-button, .github-button {
-    /*max-width: 100px;*/
   }
 
   .project-desc {
@@ -159,17 +129,8 @@ h1 {
     width: 100%;
   }
 
-  #mainhead h1 {
-    /*display: none;*/
-  }
-
   #flip-container {
     padding: 1.5px 1%;
     margin: 0 2%;
-    /*margin: 5% 5% 0 0;*/
-  }
-
-  #maincontent {
-    /*clear: none;*/
   }
 }

@@ -10,15 +10,6 @@
   padding: 0 2% 1% 0;
 }
 
-.project-desc{
-  /*width: 90%;*/
-}
-
-#MoveMe {
-  position: relative;
-  z-index: -1;
-}
-
 #mainhead h1{
   text-align: center;
 }
@@ -29,6 +20,15 @@
   z-index: 0;
 }
 
+#mini-menu {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 100%;
+  transition: 0.8s;
+  display: none;
+}
+
 #flip-container {
   text-align: center;
   display: none;
@@ -36,19 +36,20 @@
   padding: 4px 1% 2px 1%;
   font-weight: bold;
   float: right;
+  color: #055;
 }
 
 .mobilemenu, .closemobilemenu {
   width: 100%;
+  color: inherit;
 }
 
 .mobilemenu:hover, .closemobilemenu:hover {
-  border-color: #9ab;
-  color:#567;
+  color: #388;
   cursor: pointer;
 }
 
-#main-menu ul {
+#main-menu ul, #mini-menu ul {
   width: 100%;
   list-style-type: none;
   margin: 5px;
@@ -58,6 +59,14 @@
 #main-menu li {
   max-width: 15%;
   display: inline;
+  font-weight: bold;
+  color: #056;
+  margin: 0px 3%;
+  border-bottom: 5px solid #678;
+}
+
+#mini-menu li {
+  max-width: 15%;
   font-weight: bold;
   color: #056;
   margin: 0px 3%;
