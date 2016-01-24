@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Andy Malik's digital business card.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ansem717/portfolio.git"
+  },
+  "author": "Andy Malik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ansem717/portfolio/issues"
+  },
+  "homepage": "https://github.com/Ansem717/portfolio#readme",
+  "devDependencies": {
+    "eslint-config-google": "^0.3.0"
+  }
+}
